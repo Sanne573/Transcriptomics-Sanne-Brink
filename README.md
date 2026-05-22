@@ -6,5 +6,7 @@ Reumatoïde artritis is een chronische auto-immuunziekte. Het afweersysteem ziet
 RA kan op alle leeftijden beginnen. Vrouwen krijgen RA vaker dan mannen.
 
 Methode
+Gebruikte homo sapiens genome, Genome assembly GRCh38.p14, GCF_000001405.40, 
 Resultaten
+
 Conclusies
