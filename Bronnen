@@ -4,6 +4,8 @@ UMC Utrecht. (z.d.). Reumatoïde artritis - oorzaken en behandeling. https://www
 Zhang, F., et al. (2019). Defining inflammatory cell states in rheumatoid arthritis joint synovial tissues by integrating single-cell transcriptomics and mass cytometry. Nature Immunology, 20(7), 928–942. https://doi.org/10.1038/s41590-019-0378-1
 
 Homo sapiens genome assembly GRCh38.p14. (z.d.). NCBI. https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/
+Walsh, A. M., Wechalekar, M. D., Guo, Y., Yin, X., Weedon, H., Proudman, S. M., Smith, M. D., & Nagpal, S. (2017). Triple DMARD treatment in early rheumatoid arthritis modulates synovial T cell activation and plasmablast/plasma cell differentiation pathways. PLoS ONE, 12(9), e0183928. https://doi.org/10.1371/journal.pone.0183928
+
   R script
     SCript van onderstaande site gebruikt. Extra uitleg en aanpassingen gedaan met behulp van ChatGPT. 
 MetwareBio. (2026, 3 juni). How to Perform Gene Ontology (GO) Enrichment Analysis. MetwareBio. https://www.metwarebio.com/go-enrichment-analysis-clusterprofiler-guide/ 
