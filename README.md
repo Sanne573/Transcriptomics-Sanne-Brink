@@ -1,4 +1,10 @@
 # Titel
+## Structuur
+- `Data_RA_raw` – de ruwe data waarmee deze transcriptomics analyse is gedaan
+- `Bronnen` - de bronnen die voor dit onderzoek zijn gebruikt
+- `script` – scripts om prachtige onzin te genereren
+- `README.md` - het document om de tekst hier te genereren
+
 ## Introductie
 Reumatoïde artritis (RA) is een chronische auto-immuunziekte. Het afweersysteem ziet de gewrichten als lichaamsvreemd en valt ze aan. Hierdoor ontstaan ontstekingen in en rond de gewrichten. Vaak ontstaan deze ontstekingen in de pezen, slijmbeurzen of spieren, maar kunnen ook voorkomen in organen of andere weefsels buiten het gewricht (Reumatoïde Artritis (RA) | ReumaNederland, z.d.). De oorzaak van deze auto-immuunziekte is nog onbekend en hier wordt veel onderzoek naar gedaan. Momenteel is er bekend dat het geen erfelijke ziekte is. Wel zijn omgevingsfactoren belangrijk bij eht ontstaan van RA. Vooral roken is een belangrijk risicofactor (UMC Utrecht, z.d.). Er is verder bekend dat bij Reumatoïde artritis er een ontregeling is in immuungerelateerde genen en pathways (Zhang et al., 2019). Ondanks deze resultaten is er naar Reumatoïde artritis nog veel onderzoek nodig. In dit onderzoek wordt, met behulp van transcriptomics, gekeken naar de expressie van genen bij personen met Reumatoïde artritis. Hierbij is het doel de ziektemechanismen met de betrokken genen en pathways beter te analyseren en in kaart te brengen. 
 
@@ -12,7 +18,7 @@ Daarna is hiervan een differentiële expressie-analyse uitgevoerd met DESeq2 ver
 ### Gene Ontrology analyse
 De Gene Ontrology (GO) analyse is gedaan op basis van een script op MetwareBio. Aanpassingen zijn gedaan met behulp van ChatGPT. Als eerst is er een GO-enrichment analyse gedaan met clusterProfiler versie 4.18.4. Hierbij is de P-waarde gecorrigeerd met de Benjamini-Hochenberg procedure. Genen werden als statistische significant beschouwd bij een gecorrigeerde P-waarde van < 0.05 en een q-waarde, False Discovery Rate gecorrigeerde P-waarde, van < 0.02. De top 10 hiervan is weergegeven in een dotplot met enrichplot versie 1.30.5. 
 ### Data visualiseren
-Uit het dotplot zijn KEGG-pathways gekozen die zijn geanalyseerd en visualiseerd door de KEGG-pathway analyse met pathview versie 1.50.0. 
+Uit het dotplot zijn KEGG-pathways gekozen die zijn geanalyseerd met KEGGREST versie 1.50.0 en gevisualiseerd met pathview versie 1.50.0. 
 Tot slot is er een Volcanoplot gemaakt waarin de uitgezochte genen uit de verschillende pathways zijn gelabeld met EnhancedVolcano versie 1.28.2. 
 
 
