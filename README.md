@@ -23,5 +23,5 @@ Tot slot is er een Volcanoplot gemaakt waarin de uitgezochte genen uit de versch
 
 
 ## Resultaten
-(KEGG GENOME: Homo Sapiens (Human), z.d.)
+
 ## Conclusies
