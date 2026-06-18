@@ -54,12 +54,13 @@ biologische processen uit de GO-analyse. Op de y-as staan de biologische process
   <img src="Resultaten/hsa04660.pathview.png" alt="Pathway T-cel" width="500"/>
 </p>
 
-*Figuur 4.*
+*Figuur 4. KEGG pathway kaart van "T cell signaling pathway". De rood gekleurde genen zijn opgereguleerd en de groen gekleurde genen zijn neerwaarts gereguleerd ten opzichte van de controle groep.* 
 
 <p align="center">
   <img src="Resultaten/hsa04662.pathview.png" alt="Pathway B-cel" width="500"/>
 </p>
 
-*Figuur 5.* 
+*Figuur 5. KEGG pathway kaart van "B cell signaling pathway". De rood gekleurde genen zijn opgereguleerd en de groen gekleurde genen zijn neerwaarts gereguleerd ten opzichte van de controle groep.* 
+
 
 ## Conclusies
