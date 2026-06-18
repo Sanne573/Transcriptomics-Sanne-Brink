@@ -22,26 +22,23 @@ DOORLEZEN EN GOED LOPOEND MAKEN
 *Figuur 1. Flowschema.*
 
 ### Data verkrijgen
-In dit onderzoek zijn 236 RNA sequencing synoviale biopten uit artikelen van Walsh et al. en Guo et al. gecombineerd tot 1 dataset. Voor het sequencen van het RNA is in beide artikelen Illumina gebruikt. De reads zijn geanalyseerd in R (R 4.5.3) doormiddel van een transcriptomics analyse en opgeslagen in een [script](..). 
+In dit onderzoek zijn 236 RNA sequencing synoviale biopten uit artikelen van Walsh et al. en Guo et al. gecombineerd tot 1 dataset. Voor het sequencen van het RNA is in beide artikelen Illumina gebruikt. De reads zijn geanalyseerd in R (R 4.5.3) doormiddel van een transcriptomics-analyse en opgeslagen in een [script](..). 
 ### Primaire verwerking
-Als eerst is BioManager versie 1.30.27 geïnstalleerd. Daarna zijn de reads gemapped tegen het [humane referentiegenoom versie hg38 (GRCh38)](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/ ) met Rsubread versie 2.24.0. Hiervoor is eerst een index van het referentiegenoom gemaakt. De gemapte reads zijn opgeslagen in BAM-files. 
-Daarna is er met behulp van een annotatiebestand in Gene Transfer Format (GTF) een read-telling uitgevoerd. Voor het referentiegenoom werd gebruikt gemaakt van hetzelfde humane referentiegenoom versie hg38 (GRCh38). Vervolgens is er met Rsubread versie 2.24.0 een Count matrix gemaakt door de BAM-files te vergelijken met het annotatiebestand. 
-Daarna is hiervan een differentiële expressie-analyse uitgevoerd met DESeq2 versie 1.50.2. 
+Als eerst is BioManager versie 1.30.27 geïnstalleerd. Daarna zijn de reads gemapped tegen het [humane referentiegenoom versie hg38 (GRCh38)](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/ ) met Rsubread versie 2.24.0 en opgeslagen in BAM-files. Waarnaar is er, door het humane referentiegenoom versie hg38 (GRCh38) in Gene Transfer Format (GTF) en de BAM-files te vergelijken, een count matrix gemaakt met Rsubread versie 2.24.0. Vervolgens is hiervan een differentiële expressie-analyse uitgevoerd met DESeq2 versie 1.50.2 en gevisualiseerd in een Volcanoplot met EnhancedVolcano versie 1.28.2.
 ### Gene Ontrology analyse
-De Gene Ontrology (GO) analyse is gedaan op basis van een script op [MetwareBio](https://www.metwarebio.com/go-enrichment-analysis-clusterprofiler-guide/). Aanpassingen zijn gedaan met behulp van ChatGPT. Als eerst is er een GO-enrichment analyse gedaan met clusterProfiler versie 4.18.4. Hierbij is de P-waarde gecorrigeerd met de Benjamini-Hochenberg procedure. Genen werden als statistische significant beschouwd bij een gecorrigeerde P-waarde van < 0.05 en een q-waarde, False Discovery Rate gecorrigeerde P-waarde, van < 0.02. De top 10 hiervan is weergegeven in een dotplot met enrichplot versie 1.30.5. 
+De Gene Ontrology (GO) analyse is gedaan op basis van een script op [MetwareBio](https://www.metwarebio.com/go-enrichment-analysis-clusterprofiler-guide/). Aanpassingen zijn gedaan met behulp van ChatGPT. Als eerst is er een GO-enrichment analyse gedaan met clusterProfiler versie 4.18.4. Hierbij is de P-waarde gecorrigeerd met de Benjamini-Hochenberg procedure. Genen werden als statistische significant beschouwd bij een gecorrigeerde P-waarde van < 0.05 en een q-waarde, False Discovery Rate gecorrigeerde P-waarde, van < 0.02. De top 10 hiervan is weergegeven in een dotplot met enrichplot versie 1.30.5.
 ### Data visualiseren
-Uit het dotplot zijn KEGG-pathways gekozen die zijn geanalyseerd met KEGGREST versie 1.50.0 en gevisualiseerd met pathview versie 1.50.0. 
-Tot slot is er een Volcanoplot gemaakt waarin de uitgezochte genen uit de verschillende pathways zijn gelabeld met EnhancedVolcano versie 1.28.2. 
+Uit het dotplot zijn KEGG-pathways gekozen die zijn geanalyseerd en visualiseerd door de KEGG-pathway analyse met pathview versie 1.50.0. 
 
 ## Resultaten
-In dit onderzoek is gekeken naar 236 RNA seq biopten van personen met en zonder reuma. Deze data is geanalyseerd doormiddel van een transcriptomics analyse. Hierbij is een differentiële expressie-analyse uitgevoerd. Dit is gevisualiseerd met een volcano plot. Daarna is een GO-analyse gedaan waaruit een dotplot is gemaakt. Tot slot zijn er KEGG pathways gekozen en gevisualiseerd. Hieruit zijn een aantal differentieel tot expressie gekomen genen gekozen en uitgelicht. 
+In dit onderzoek is gekeken naar RNA sequenties van personen met en zonder reuma. Deze data is geanalyseerd doormiddel van een transcriptomics-analyse. Hierbij is een differentiële expressie-analyse uitgevoerd wat is gevisualiseerd in een volcano plot. Daarna is een GO-analyse gedaan waaruit een dotplot is gemaakt. Tot slot zijn er KEGG pathways gekozen en gevisualiseerd, waaruit een aantal differentieel tot expressie gekomen genen gekozen en uitgelicht. 
 
-In het figuur 2 is een volcano plot te zien. De rode punten zijn genen die binnen de beide grenswaarden vallen; een -log10 p van > 5 en een log2 fold change van -2 tot 2. Dit zijn dus de genen die statistisch significant zijn veranderd. GELABELDE GENEN UITLEGGEN, HOEVEEL VERANDERD EN HOE ZEKER IS DIT. 
+In het figuur 2 is een volcano plot te zien. De rode punten zijn genen die binnen de beide grenswaarden vallen en dus significant differentieel tot expressie zijn gekomen. Hoe hoger het gen in de plot ligt, hoe significanter de expressie. Hoe verder het gen naar rechts ligt, hoe meer expressie deze vertoont. 
 
 VULCANO PLOT
 *Figuur 2. Volcano plot van differentiële expressie-analyse van patiënten met Reumatoïde artiritis ten opzichte van gezonde personen. Op de x-as is de log2 fold change weergegeven en op de y-as de -log10 P. De stippellijnen zijn de gestelde grenzen; een log2 fold change van -2 tot 2 en een -log10 p van > 5. De rode punten vallen binnen deze grenswaarden. De groene punten vallen alleen binnen de grenswaarden van de log2 fold change. De grijze punten vallen binnen geen van beide grenswaarden. De gelabelde genen worden in dit onderzoek verder besproken en dieper op in gegeaan.*
 
-
+De resultaten van de GO-analyse zijn weergegeven in een dotplot in figuur 3. Hierin staat de top 10 meest significante biologische processen waarin meer differentieel geëxpresseerde genen in voorkomen dan verwacht wordt. Er is gekozen om de pathways “T cell receptor signaling pathway” en “B cell signaling pathway” verder uit te zoeken. 
 
 <p align="center">
   <img src="Resultaten/GO_dotplot1.png" alt="Dotplot" width="500"/>
