@@ -1,8 +1,10 @@
 # Titel
 ## Structuur
 AANVULLEN
-- `Data_RA_raw` – Ruwe data waarmee deze transcriptomics analyse is gedaan
-- `Bronnen` - Bronnen die voor dit onderzoek zijn gebruikt
+- `Data_RA_raw` – Hierin staat de ruwe data waarmee deze transcriptomics analyse is gedaan
+- `FLowschema` - Hierin staat het flowschema wat gebruikt is in de methode
+-  `Resultaten` - Hierin staan de figuren die zijn gebruikt in de resultaten
+- `Bronnen` - Hierin staan de bronnen die gebruikt zijn over het gehele verslag
 - `script` – Hierin staat het script hoe de transcriptomics analyse is uitgevoerd
 - `README.md` - Het document met het verslag er in
 
@@ -30,6 +32,8 @@ Tot slot is er een Volcanoplot gemaakt waarin de uitgezochte genen uit de versch
 
 
 ## Resultaten
+
+  VULCANOPLOT
 <p align="center">
   <img src="Resultaten/GO_dotplot1.png" alt="Dotplot" width="500"/>
 </p>
@@ -40,10 +44,6 @@ Tot slot is er een Volcanoplot gemaakt waarin de uitgezochte genen uit de versch
 
 <p align="center">
   <img src="Resultaten/hsa04662.pathview.png" alt="Pathway B-cel" width="500"/>
-</p>
-
-<p align="center">
-  <img src="Resultaten/hsa05323.pathview.png" alt="Pathway RA" width="500"/>
 </p>
 
 ## Conclusies
