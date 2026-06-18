@@ -10,7 +10,7 @@ Reumatoïde artritis (RA) is een chronische auto-immuunziekte. Het afweersysteem
 
 ## Methode
 <p align="center">
-  <img src="Flowschema/Flowschema.png" alt="Flowschema" width="600"/>
+  <img src="Flowschema/Flowschema.png" alt="Flowschema" width="800"/>
 </p>
 
 ### Data verkrijgen
