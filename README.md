@@ -19,6 +19,8 @@ DOORLEZEN EN GOED LOPOEND MAKEN
   <img src="Flowschema/Flowschema.png" alt="Flowschema" width="800"/>
 </p>
 
+*Figuur 1. Flowschema.*
+
 ### Data verkrijgen
 In dit onderzoek zijn 236 RNA sequencing synoviale biopten uit artikelen van Walsh et al. en Guo et al. gecombineerd tot 1 dataset. Voor het sequencen van het RNA is in beide artikelen Illumina gebruikt. De reads zijn geanalyseerd in R (R 4.5.3) doormiddel van een transcriptomics analyse en opgeslagen in een [script](..). 
 ### Primaire verwerking
@@ -32,21 +34,30 @@ Uit het dotplot zijn KEGG-pathways gekozen die zijn geanalyseerd met KEGGREST ve
 Tot slot is er een Volcanoplot gemaakt waarin de uitgezochte genen uit de verschillende pathways zijn gelabeld met EnhancedVolcano versie 1.28.2. 
 
 ## Resultaten
+In dit onderzoek is gekeken naar 236 RNA seq biopten van personen met en zonder reuma. Deze data is geanalyseerd doormiddel van een transcriptomics analyse. Hierbij is een differentiële expressie-analyse uitgevoerd. Dit is gevisualiseerd met een volcano plot. Daarna is een GO-analyse gedaan waaruit een dotplot is gemaakt. Tot slot zijn er KEGG pathways gekozen en gevisualiseerd. Hieruit zijn een aantal differentieel tot expressie gekomen genen gekozen en uitgelicht. 
 
-  VULCANOPLOT
+In het figuur 2 is een volcano plot te zien. De rode punten zijn genen die binnen de beide grenswaarden vallen; een -log10 p van > 5 en een log2 fold change van -2 tot 2. Dit zijn dus de genen die statistisch significant zijn veranderd. GELABELDE GENEN UITLEGGEN, HOEVEEL VERANDERD EN HOE ZEKER IS DIT. 
+
+VULCANO PLOT
+*Figuur 2. Volcano plot van differentiële expressie-analyse van patiënten met Reumatoïde artiritis ten opzichte van gezonde personen. Op de x-as is de log2 fold change weergegeven en op de y-as de -log10 P. De stippellijnen zijn de gestelde grenzen; een log2 fold change van -2 tot 2 en een -log10 p van > 5. De rode punten vallen binnen deze grenswaarden. De groene punten vallen alleen binnen de grenswaarden van de log2 fold change. De grijze punten vallen binnen geen van beide grenswaarden. De gelabelde genen worden in dit onderzoek verder besproken en dieper op in gegeaan.*
 
 <p align="center">
   <img src="Resultaten/GO_dotplot1.png" alt="Dotplot" width="500"/>
 </p>
 
-*Figuur 2. Volcano plot van differentiële expressie-analyse van patiënten met Reumatoïde artiritis ten opzichte van gezonde personen. Op de x-as is de log2 fold change weergegeven en op de y-as de -log10 P. De stippellijnen zijn de gestelde grenzen; een log2 fold change van -2 tot 2 en een -log10 p van > 5. De rode punten vallen binnen deze grenswaarden. De groene punten vallen alleen binnen de grenswaarden van de log2 fold change. De grijze punten vallen binnen geen van beide grenswaarden. De gelabelde genen worden in dit onderzoek verder besproken en dieper op in gegeaan.*
+*Figuur 3. Dotplot van de top 10 meest significante 
+biologische processen uit de GO-analyse. Op de y-as staan de biologische processen en op de x-as het gen ratio, of wel het aandeel genen dat bij het proces betrokken is. De kleur overgang geeft de p.adjust waarde weer, p-waarde gecorrigeerd met Benjamini-Hochenberg procedure. De grote van de bolletjes geeft het aantal genen weer dat binnen het biologische proces vallen.*
 
 <p align="center">
   <img src="Resultaten/hsa04660.pathview.png" alt="Pathway T-cel" width="500"/>
 </p>
 
+*Figuur 4.*
+
 <p align="center">
   <img src="Resultaten/hsa04662.pathview.png" alt="Pathway B-cel" width="500"/>
 </p>
+
+*Figuur 5.* 
 
 ## Conclusies
