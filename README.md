@@ -28,18 +28,18 @@ Tot slot is er een Volcanoplot gemaakt waarin de uitgezochte genen uit de versch
 
 ## Resultaten
 <p align="center">
-  <img src="Resultaten/GO_dotplot1.png" alt="Dotplot" width="800"/>
+  <img src="Resultaten/GO_dotplot1.png" alt="Dotplot" width="500"/>
 </p>
 
 <p align="center">
-  <img src="Resultaten/hsa04660.pathview.png" alt="Pathway T-cel" width="800"/>
+  <img src="Resultaten/hsa04660.pathview.png" alt="Pathway T-cel" width="500"/>
 </p>
 
 <p align="center">
-  <img src="Resultaten/hsa04662.pathview.png" alt="Pathway B-cel" width="800"/>
+  <img src="Resultaten/hsa04662.pathview.png" alt="Pathway B-cel" width="500"/>
 </p>
 
 <p align="center">
-  <img src="Resultaten/hsa05323.pathview.png" alt="Pathway RA" width="800"/>
+  <img src="Resultaten/hsa05323.pathview.png" alt="Pathway RA" width="500"/>
 </p>
 ## Conclusies
