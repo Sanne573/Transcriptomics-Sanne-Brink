@@ -14,6 +14,7 @@ Reumatoïde artritis (RA) is een chronische auto-immuunziekte. Het afweersysteem
 
 ## Methode
 DOORLEZEN EN GOED LOPOEND MAKEN
+
 <p align="center">
   <img src="Flowschema/Flowschema.png" alt="Flowschema" width="800"/>
 </p>
@@ -30,10 +31,10 @@ De Gene Ontrology (GO) analyse is gedaan op basis van een script op [MetwareBio]
 Uit het dotplot zijn KEGG-pathways gekozen die zijn geanalyseerd met KEGGREST versie 1.50.0 en gevisualiseerd met pathview versie 1.50.0. 
 Tot slot is er een Volcanoplot gemaakt waarin de uitgezochte genen uit de verschillende pathways zijn gelabeld met EnhancedVolcano versie 1.28.2. 
 
-
 ## Resultaten
 
   VULCANOPLOT
+
 <p align="center">
   <img src="Resultaten/GO_dotplot1.png" alt="Dotplot" width="500"/>
 </p>
