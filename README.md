@@ -64,3 +64,7 @@ De pathways zijn geanalyseerd en weergegeven in de figuren 4 en 5. In beide figu
 
 
 ## Conclusies
+Uit deze transcriptomics analyse zijn 2 KEGG-pathways gekozen die verder zijn uitgelicht; “T cell receptor signaling pathway” en “B cell signaling pathway”. Er is verder gekeken naar het MAPK-pathway die in beide KEGG-pathways voor komt. Dit pathway zorgt onder andere voor groei en differentiatie van de cellen, maar ook voor bijvoorbeeld het produceren van ontstekingscytokinen (Morrison, 2012). Hierin is te zien dat in beide pathways de genen Ras, MEK1/2 en Erk zijn upgereguleerd. Deze genen zorgen onder andere voor bevorderen van de groei, differentiatie en overleving van de cellen (Xie et al., 2025). Wat er dus voor zorgt dat T- en B-cellen beter groeien en overleven. 
+In het T-cell signaling pathway is ook te zien dat het gen MKK7 sterk is upgereguleerd. Dit gen stuurt andere genen in het synoviaal weefsel aan om ontstekingscytokinen te produceren. Zo ontstaat er een ontsteking tussen de gewrichten (Lee et al., 2012). 
+Een disregulatie in het MAPK pathway zou dus een oorzaak kunnen zijn van Reumatoïde atritis. 
+In een volgend onderzoek zou gekeken kunnen worden naar andere immuun pathways. Of andere onderdelen in dit onderzoek uitgezochte pathways. Er zijn veel meer genen die up of down gereguleerd zijn en verder onderzoek kunnen gebruiken. 
