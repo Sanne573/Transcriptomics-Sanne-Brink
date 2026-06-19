@@ -1,10 +1,10 @@
 # Immuunregulerend pathway MAPK verantwoordelijk voor Reumatoïde atritis
 ## Structuur
 - `Data_RA_raw` - Hierin staat de ruwe data waarmee deze transcriptomics analyse is gedaan
+- `Data_beheer` - Hierin staat beschreven hoe de data is beheerd
 - `FLowschema` - Hierin staat het flowschema wat gebruikt is in de methode
 -  `Resultaten` - Hierin staan de figuren die zijn gebruikt in de resultaten
 - `Bronnen` - Hierin staan de bronnen die gebruikt zijn over het gehele verslag
-- `Data_beheer` - Hierin staat beschreven hoe de data is beheerd
 - `README.md` - Het document met het verslag er in
 - `script` - Hierin staat het script hoe de transcriptomics analyse is uitgevoerd
 
