@@ -1,5 +1,5 @@
 # Instellen working directory
-setwd("C:/Users/gebruiker/OneDrive - Landstede Groep/Bureaublad/School/BML/2e/4e semester/Transcriptomics/Transcriptomics-Sanne-Brink")
+setwd("C:/Users/gebruiker/OneDrive-etc.")
 getwd()
 
 # Instaleren packages
