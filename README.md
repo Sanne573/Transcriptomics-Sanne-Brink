@@ -1,12 +1,12 @@
 # Immuunregulerend pathway MAPK verantwoordelijk voor Reumatoïde atritis
 ## Structuur
-AANVULLEN
-- `Data_RA_raw` – Hierin staat de ruwe data waarmee deze transcriptomics analyse is gedaan
+- `Data_RA_raw` - Hierin staat de ruwe data waarmee deze transcriptomics analyse is gedaan
 - `FLowschema` - Hierin staat het flowschema wat gebruikt is in de methode
 -  `Resultaten` - Hierin staan de figuren die zijn gebruikt in de resultaten
 - `Bronnen` - Hierin staan de bronnen die gebruikt zijn over het gehele verslag
-- `script` – Hierin staat het script hoe de transcriptomics analyse is uitgevoerd
 - `README.md` - Het document met het verslag er in
+- `script` - Hierin staat het script hoe de transcriptomics analyse is uitgevoerd
+- `Data_beheer` - Hierin staat beschreven hoe de data is beheerd
 
 ## Introductie
 Reumatoïde artritis (RA) is een chronische auto-immuunziekte. Het afweersysteem ziet de gewrichten als lichaamsvreemd en valt ze aan. Hierdoor ontstaan ontstekingen in en rond de gewrichten. Vaak ontstaan deze ontstekingen in de pezen, slijmbeurzen of spieren, maar kunnen ook voorkomen in organen of andere weefsels buiten het gewricht (Reumatoïde Artritis (RA) | ReumaNederland, z.d.). De oorzaak van deze auto-immuunziekte is nog onbekend en hier wordt veel onderzoek naar gedaan. Momenteel is er bekend dat het geen erfelijke ziekte is. Wel zijn omgevingsfactoren belangrijk bij het ontstaan van RA (UMC Utrecht, z.d.). Vooral roken is een belangrijk risicofactor (Venken & Elewaut, 2025). Verder is er bekend dat bij Reumatoïde artritis er een ontregeling is in immuungerelateerde genen en pathways (Zhang et al., 2019). Ondanks deze resultaten is er naar Reumatoïde artritis nog veel onderzoek nodig. In dit onderzoek wordt, met behulp van transcriptomics, gekeken naar de expressie van genen in KEGG-pathways bij personen met Reumatoïde artritis. Hierbij is het doel de ziektemechanismen met de betrokken genen en pathways beter te analyseren en in kaart te brengen. 
