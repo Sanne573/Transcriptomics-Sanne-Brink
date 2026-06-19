@@ -39,7 +39,7 @@ In het figuur 2 is een Volcanoplot te zien. De rode punten zijn genen die binnen
 
 *Figuur 2. Volcano plot van differentiële expressie-analyse van patiënten met Reumatoïde artiritis ten opzichte van gezonde personen. Op de x-as is de log2 fold change weergegeven en op de y-as de -log10 P. De stippellijnen zijn de gestelde grenzen; een log2 fold change van -2 tot 2 en een -log10 p van > 5. De rode punten vallen binnen deze grenswaarden. De groene punten vallen alleen binnen de grenswaarden van de log2 fold change. De grijze punten vallen binnen geen van beide grenswaarden. De gelabelde genen worden in dit onderzoek verder besproken en dieper op in gegeaan.*
 
-De resultaten van de GO-analyse zijn weergegeven in een dotplot in figuur 3. Hierin staat de top 10 meest significante biologische processen waarin meer differentieel geëxpresseerde genen in voorkomen dan verwacht wordt. Er is gekozen om de KEGG-pathways ['T cell receptor signaling pathway'] (https://www.kegg.jp/pathway/hsa04660) en ['B cell signaling pathway'] (https://www.kegg.jp/pathway/hsa04662) verder uit te zoeken. 
+De resultaten van de GO-analyse zijn weergegeven in een dotplot in figuur 3. Hierin staat de top 10 meest significante biologische processen waarin meer differentieel geëxpresseerde genen in voorkomen dan verwacht wordt. Er is gekozen om de KEGG-pathways "[T cell receptor signaling pathway](https://www.kegg.jp/pathway/hsa04660)" en "[B cell signaling pathway'](https://www.kegg.jp/pathway/hsa04662)" verder uit te zoeken. 
 
 <p align="center">
   <img src="Resultaten/GO_dotplot1.png" alt="Dotplot" width="500"/>
