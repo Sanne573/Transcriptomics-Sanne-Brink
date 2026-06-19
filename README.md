@@ -20,7 +20,7 @@ Reumatoïde artritis (RA) is een chronische auto-immuunziekte. Het afweersysteem
 *Figuur 1. Flowschema.*
 
 ### Data verkrijgen
-In dit onderzoek zijn 236 RNA sequencing synoviale biopten uit artikelen van Walsh et al. en Guo et al. gecombineerd tot 1 dataset. Voor het sequencen van het RNA is in beide artikelen Illumina gebruikt. De reads zijn geanalyseerd in R (R 4.5.3) doormiddel van een transcriptomics-analyse en opgeslagen in een [script](..). 
+In dit onderzoek zijn 236 RNA sequencing synoviale biopten uit artikelen van Walsh et al. en Guo et al. gecombineerd tot 1 dataset. Voor het sequencen van het RNA is in beide artikelen Illumina gebruikt. De reads zijn geanalyseerd in R (R 4.5.3) doormiddel van een transcriptomics-analyse en opgeslagen in een [script](Script). 
 ### Primaire verwerking
 Als eerst is BioManager versie 1.30.27 geïnstalleerd. Daarna zijn de reads gemapped tegen het [humane referentiegenoom versie hg38 (GRCh38)](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/ ) met Rsubread versie 2.24.0 en opgeslagen in BAM-files. Waarnaar is er, door het humane referentiegenoom versie hg38 (GRCh38) in Gene Transfer Format (GTF) en de BAM-files te vergelijken, een count matrix gemaakt met Rsubread versie 2.24.0. Vervolgens is hiervan een differentiële expressie-analyse uitgevoerd met DESeq2 versie 1.50.2 en gevisualiseerd in een Volcanoplot met EnhancedVolcano versie 1.28.2.
 ### Gene Ontrology analyse
