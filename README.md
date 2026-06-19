@@ -29,9 +29,6 @@ Er is een Gene Ontology (GO) analyse gedaan op basis van een script op [MetwareB
 Uit het dotplot zijn KEGG-pathways gekozen die zijn geanalyseerd en visualiseert door de KEGG-pathway analyse met pathview versie 1.50.0. 
 
 ## Resultaten
-https://www.kegg.jp/pathway/hsa04660 - t cell
-https://www.kegg.jp/pathway/hsa04662 - b cell
-
 In dit onderzoek is gekeken naar RNA sequenties van personen met en zonder reuma. Deze data is geanalyseerd doormiddel van een transcriptomics-analyse. Hierbij is een differentiële expressie-analyse uitgevoerd wat is gevisualiseerd in een volcanoplot. Daarna is een GO-analyse gedaan waaruit een dotplot is gemaakt. Tot slot zijn er KEGG pathways gekozen en gevisualiseerd, waaruit een aantal differentieel tot expressie gekomen genen gekozen en uitgelicht. 
 
 In het figuur 2 is een Volcanoplot te zien. De rode punten zijn genen die binnen de beide grenswaarden vallen en dus significant differentieel tot expressie zijn gekomen. Hoe hoger het gen in de plot ligt, hoe significanter de expressie. Hoe verder het gen naar rechts ligt, hoe meer expressie deze vertoont. 
@@ -42,7 +39,7 @@ In het figuur 2 is een Volcanoplot te zien. De rode punten zijn genen die binnen
 
 *Figuur 2. Volcano plot van differentiële expressie-analyse van patiënten met Reumatoïde artiritis ten opzichte van gezonde personen. Op de x-as is de log2 fold change weergegeven en op de y-as de -log10 P. De stippellijnen zijn de gestelde grenzen; een log2 fold change van -2 tot 2 en een -log10 p van > 5. De rode punten vallen binnen deze grenswaarden. De groene punten vallen alleen binnen de grenswaarden van de log2 fold change. De grijze punten vallen binnen geen van beide grenswaarden. De gelabelde genen worden in dit onderzoek verder besproken en dieper op in gegeaan.*
 
-De resultaten van de GO-analyse zijn weergegeven in een dotplot in figuur 3. Hierin staat de top 10 meest significante biologische processen waarin meer differentieel geëxpresseerde genen in voorkomen dan verwacht wordt. Er is gekozen om de KEGG-pathways “T cell receptor signaling pathway” en “B cell signaling pathway” verder uit te zoeken. 
+De resultaten van de GO-analyse zijn weergegeven in een dotplot in figuur 3. Hierin staat de top 10 meest significante biologische processen waarin meer differentieel geëxpresseerde genen in voorkomen dan verwacht wordt. Er is gekozen om de KEGG-pathways [“T cell receptor signaling pathway”] (https://www.kegg.jp/pathway/hsa04660) en [“B cell signaling pathway”] (https://www.kegg.jp/pathway/hsa04662) verder uit te zoeken. 
 
 <p align="center">
   <img src="Resultaten/GO_dotplot1.png" alt="Dotplot" width="500"/>
