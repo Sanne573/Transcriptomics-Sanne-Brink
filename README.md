@@ -1,4 +1,4 @@
-# Titel
+# Immuunregulerend pathway MAPK verantwoordelijk voor Reumatoïde atritis
 ## Structuur
 AANVULLEN
 - `Data_RA_raw` – Hierin staat de ruwe data waarmee deze transcriptomics analyse is gedaan
