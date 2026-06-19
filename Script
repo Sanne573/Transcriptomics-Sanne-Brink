@@ -1,0 +1,185 @@
+# Instellen working directory
+setwd("C:/Users/gebruiker/OneDrive - Landstede Groep/Bureaublad/School/BML/2e/4e semester/Transcriptomics/Transcriptomics-Sanne-Brink")
+getwd()
+
+# Instaleren packages
+install.packages('BiocManager')
+BiocManager::install('Rsubread')
+BiocManager::install("DESeq2")
+BiocManager::install("KEGGREST") 
+BiocManager::install("EnhancedVolcano")
+BiocManager::install("pathview")
+
+# Inladen packages
+library(DESeq2)
+library(KEGGREST)
+library(EnhancedVolcano)
+library(pathview)
+library(Rsubread)
+library('BiocManager')
+
+# Indexeren
+buildindex(
+  basename = 'ref_humane',
+  reference = 'ncbi_dataset_humane/ncbi_dataset/data/GCF_000001405.40/GCF_000001405.40_GRCh38.p14_genomic.fna',
+  memory = 4000,
+  indexSplit = TRUE)
+
+# Mapping 
+align.control1 <- align(index = "ref_humane", readfile1 = "Data_RA_raw/Data_RA_raw/SRR4785819_1_subset40k.fastq", readfile2 = "Data_RA_raw/Data_RA_raw/SRR4785819_2_subset40k.fastq", output_file = "control1.BAM")
+align.control2 <- align(index = "ref_humane", readfile1 = "Data_RA_raw/Data_RA_raw/SRR4785820_1_subset40k.fastq", readfile2 = "Data_RA_raw/Data_RA_raw/SRR4785820_2_subset40k.fastq", output_file = "control2.BAM")
+align.control3 <- align(index = "ref_humane", readfile1 = "Data_RA_raw/Data_RA_raw/SRR4785828_1_subset40k.fastq", readfile2 = "Data_RA_raw/Data_RA_raw/SRR4785828_2_subset40k.fastq", output_file = "control3.BAM")
+align.control4 <- align(index = "ref_humane", readfile1 = "Data_RA_raw/Data_RA_raw/SRR4785831_1_subset40k.fastq", readfile2 = "Data_RA_raw/Data_RA_raw/SRR4785831_2_subset40k.fastq", output_file = "control4.BAM")
+align.RA1 <- align(index = "ref_humane", readfile1 = "Data_RA_raw/Data_RA_raw/SRR4785979_1_subset40k.fastq", readfile2 = "Data_RA_raw/Data_RA_raw/SRR4785979_2_subset40k.fastq", output_file = "RA1.BAM")
+align.RA2 <- align(index = "ref_humane", readfile1 = "Data_RA_raw/Data_RA_raw/SRR4785980_1_subset40k.fastq", readfile2 = "Data_RA_raw/Data_RA_raw/SRR4785980_2_subset40k.fastq", output_file = "RA2.BAM")
+align.RA3 <- align(index = "ref_humane", readfile1 = "Data_RA_raw/Data_RA_raw/SRR4785986_1_subset40k.fastq", readfile2 = "Data_RA_raw/Data_RA_raw/SRR4785986_2_subset40k.fastq", output_file = "RA3.BAM")
+align.RA4 <- align(index = "ref_humane", readfile1 = "Data_RA_raw/Data_RA_raw/SRR4785988_1_subset40k.fastq", readfile2 = "Data_RA_raw/Data_RA_raw/SRR4785988_2_subset40k.fastq", output_file = "RA4.BAM")
+
+# Count matrix maken voor alle samples
+  # Eerst vector maken van alle samples
+  allsamples <- c("RA1.BAM", "RA2.BAM", "RA3.BAM", "RA4.BAM", "control1.BAM", "control2.BAM", "control3.BAM", "control4.BAM")
+  # Dan count matrix maken, met vector opgeven inplaats van 1 sample file
+  count_matrix <- featureCounts(
+   files = allsamples,
+   annot.ext = "ncbi_dataset_humane/ncbi_dataset/data/GCF_000001405.40/genomic.gtf",
+   isPairedEnd = TRUE,
+   isGTFAnnotationFile = TRUE,
+   GTF.attrType = "gene_id",
+    useMetaFeatures = TRUE)
+
+# Count matrix bekijken
+str(count_matrix)
+
+# Counts opslaan onder nieuwe naam
+counts <- count_matrix$counts
+head(counts)
+  # Namen geven aan de kolomen
+  colnames(counts) <- c("RA1", "RA2", "RA3", "RA4", "control1", "control2", "control3", "control4")
+  head(counts)
+
+# Opslaan van file
+write.csv(counts, "RA_countmatrix.csv")
+
+# Inladen hele file (gekregen van docent)
+counts <- read.table("count_matrix_RA.txt", row.names = 1)
+colnames(counts) <- c("RA1", "RA2", "RA3", "RA4", "control1", "control2", "control3", "control4")
+  head(counts)
+
+# Tabel maken
+treatment <- c("RA", "RA", "RA", "RA", "control", "control", "control", "control")
+treatment_table <- data.frame(treatment)
+  # Rijnamen veranderen
+  rownames(treatment_table) <- c('RA1', 'RA2', 'RA3', 'RA4', 'control1', 'control2', 'control3', 'control4')
+
+# Maak DESeqDataSet aan
+dds <- DESeqDataSetFromMatrix(countData = counts,
+                                colData = treatment_table,
+                                design = ~ treatment)
+
+# Analyse uitvoeren
+dds <- DESeq(dds)
+resultaten <- results(dds)
+
+# Resultaten opslaan
+write.table(resultaten, file = 'Resultaten.txt', row.names = TRUE, col.names = TRUE)
+
+  # Genen die "echt" veranderd zijn weergeven
+  sum(resultaten$padj < 0.05 & resultaten$log2FoldChange > 1, na.rm = TRUE)
+  sum(resultaten$padj < 0.05 & resultaten$log2FoldChange < -1, na.rm = TRUE)
+
+  # Kijken welke genen eruit springen
+  hoogste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = TRUE), ]
+  laagste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = FALSE), ]
+  laagste_p_waarde <- resultaten[order(resultaten$padj, decreasing = FALSE), ]
+
+# Volcanoplot visualiseren
+EnhancedVolcano(
+    resultaten,
+    lab = rep("", nrow(resultaten)),
+    x = "log2FoldChange",
+    y = "padj"
+  )
+# Figuur opslaan
+dev.copy(png, 'VolcanoplotWC.png', 
+         width = 8,
+         height = 10,
+         units = 'in',
+         res = 500)
+dev.off()
+
+# GO-analyse (MetwareBio, 2026)*
+  # Packages inladen
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
+}
+if (!requireNamespace("clusterProfiler", quietly = TRUE)) {
+  BiocManager::install("clusterProfiler")
+}
+if (!requireNamespace("org.Hs.eg.db", quietly = TRUE)) {
+  BiocManager::install("org.Hs.eg.db")
+}
+if (!requireNamespace("GO.db", quietly = TRUE)) {
+  BiocManager::install("GO.db")
+}
+if (!requireNamespace("enrichplot", quietly = TRUE)) {
+  BiocManager::install("enrichplot")
+}
+library(clusterProfiler)
+library(org.Hs.eg.db)
+library(GO.db)
+library(enrichplot)
+  # Data inladen 
+All <- read.table("Resultaten.txt", header = TRUE)
+
+  # Subset maken met padj < 0.05*
+library(dplyr)
+DEGs <- All %>%
+  filter(padj < 0.05)
+DEGs <- rownames(DEGs)
+
+ # GO Enrichment analyse
+enrichFrame <- enrichGO(DEGs,
+                        OrgDb = org.Hs.eg.db,
+                        keyType = "SYMBOL",
+                        ont = "ALL",
+                        pAdjustMethod = "BH",
+                        pvalueCutoff = 0.05,
+                        qvalueCutoff = 0.2)
+  # Visualisatie GO Enrichment analyse
+    # Dotplot top 10
+png("GO_dotplot1.png", width = 1200, height = 900, res = 150)
+dotplot(enrichFrame,
+        x = "GeneRatio",
+        color = "p.adjust",
+        title = "Top 10 van GO Enrichment",
+        showCategory = 10,
+        label_format = 60)
+dev.off()
+
+# Pathway analyse 
+All[1] <- NULL
+All[2:5] <- NULL
+    # T-cell signaling pathway
+pathview(
+  gene.data = All,
+  pathway.id = "04660",  
+  species = "hsa",          
+  gene.idtype = "SYMBOL",     
+  limit = list(gene = 5)    
+)
+    # B-cell signaling pathway
+pathview(
+  gene.data = All,
+  pathway.id = "04662",  
+  species = "hsa",          
+  gene.idtype = "SYMBOL",     
+  limit = list(gene = 5)    
+)
+    # RA pathway
+pathview(
+  gene.data = All,
+  pathway.id = "05323",  
+  species = "hsa",          
+  gene.idtype = "SYMBOL",     
+  limit = list(gene = 5)    
+)
