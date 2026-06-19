@@ -29,7 +29,7 @@ Er is een Gene Ontology (GO) analyse gedaan op basis van een script op [MetwareB
 Uit het dotplot zijn KEGG-pathways gekozen die zijn geanalyseerd en visualiseert door de KEGG-pathway analyse met pathview versie 1.50.0. 
 
 ## Resultaten
-In dit onderzoek is gekeken naar RNA sequenties van personen met en zonder reuma. Deze data is geanalyseerd doormiddel van een transcriptomics-analyse. Hierbij is een differentiële expressie-analyse uitgevoerd wat is gevisualiseerd in een volcanoplot. Daarna is een GO-analyse gedaan waaruit een dotplot is gemaakt. Tot slot zijn er KEGG pathways gekozen en gevisualiseerd, waaruit een aantal differentieel tot expressie gekomen genen gekozen en uitgelicht. 
+In dit onderzoek is gekeken naar RNA sequenties van personen met en zonder reuma. Deze data is geanalyseerd doormiddel van een transcriptomics-analyse. Hierbij is een differentiële expressie-analyse uitgevoerd wat is gevisualiseerd in een volcanoplot. Daarna is een GO-analyse gedaan waaruit een dotplot is gemaakt. Tot slot zijn er KEGG-pathways gekozen en gevisualiseerd, waaruit een aantal differentieel tot expressie gekomen genen zijn uitgekozen en uitgelicht. 
 
 In het figuur 2 is een Volcanoplot te zien. De rode punten zijn genen die binnen de beide grenswaarden vallen en dus significant differentieel tot expressie zijn gekomen. Hoe hoger het gen in de plot ligt, hoe significanter de expressie. Hoe verder het gen naar rechts ligt, hoe meer expressie deze vertoont. 
 
